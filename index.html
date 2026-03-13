@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brandpeneur || Digital Marketing for eCommerce</title>
+  <meta name="description" content="Predictable, compounding growth for Shopify stores doing over 7 figures per year. Done-for-you Profit Formula system.">
+  <link rel="icon" href="favicon.ico">
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','1418511615991792');
+    fbq('track','PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1418511615991792&ev=PageView&noscript=1"/></noscript>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --black: #000000;
+      --dark: #0a0a0a;
+      --dark-card: #111111;
+      --red: #cc0000;
+      --red-dark: #990000;
+      --white: #ffffff;
+      --white-65: rgba(255,255,255,0.65);
+      --white-40: rgba(255,255,255,0.4);
+      --gold: #f5c518;
+      --green: #22c55e;
+      --border: rgba(255,255,255,0.1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--black);
+      color: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Top bar */
+    .top-bar {
+      background: var(--red);
+      text-align: center;
+      padding: 10px 16px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 0.02em;
+    }
+
+    /* Header */
+    .header {
+      padding: 40px 0 20px;
+      text-align: center;
+    }
+
+    .logo {
+      font-family: 'Inter', sans-serif;
+      font-size: 28px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .logo span:first-child { font-weight: 900; }
+    .logo span:last-child { font-weight: 300; }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 16px;
+      font-size: 14px;
+      color: var(--white-65);
+    }
+
+    .stars { color: var(--gold); font-size: 18px; letter-spacing: 2px; }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 30px 0 40px;
+    }
+
+    .hero h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(28px, 4.5vw, 48px);
+      font-weight: 400;
+      line-height: 1.25;
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .hero h1 strong { font-weight: 800; }
+    .hero h1 em { font-style: italic; font-weight: 400; }
+
+    /* Video section */
+    .video-section {
+      max-width: 900px;
+      margin: 0 auto 40px;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      background: var(--dark);
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: none;
+    }
+
+    /* CTA */
+    .cta-text {
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(18px, 2.5vw, 24px);
+      font-weight: 500;
+      max-width: 800px;
+      margin: 0 auto 30px;
+      line-height: 1.5;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--red);
+      color: var(--white);
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      padding: 18px 48px;
+      border-radius: 50px;
+      transition: background 0.3s, transform 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn:hover { background: var(--red-dark); transform: translateY(-2px); }
+
+    .cta-center { text-align: center; margin: 20px 0 60px; }
+
+    /* Platforms */
+    .platforms {
+      text-align: center;
+      padding: 40px 0 60px;
+    }
+
+    .platforms h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(18px, 2.5vw, 24px);
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    .platform-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .platform-logos .platform-logo {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--white-65);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      letter-spacing: 0.05em;
+    }
+
+    .platform-logos svg { height: 28px; width: auto; fill: var(--white-65); }
+
+    /* Testimonials */
+    .testimonials {
+      padding: 80px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .testimonials h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(24px, 3.5vw, 40px);
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 60px;
+      line-height: 1.3;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      background: var(--dark-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+    }
+
+    .testimonial-card .name {
+      font-weight: 700;
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+
+    .testimonial-card .role {
+      font-size: 13px;
+      color: var(--white-40);
+      margin-bottom: 16px;
+    }
+
+    .testimonial-card .quote {
+      font-style: italic;
+      color: var(--white-65);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* Partners */
+    .partners {
+      padding: 60px 0;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+
+    .partners h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(20px, 3vw, 32px);
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+
+    .partner-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+      opacity: 0.7;
+    }
+
+    .partner-logos img {
+      height: 50px;
+      width: auto;
+      filter: brightness(0) invert(1);
+    }
+
+    /* How we're different */
+    .comparison {
+      padding: 80px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .comparison h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(24px, 3.5vw, 40px);
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 700px) {
+      .comparison-grid { grid-template-columns: 1fr; }
+    }
+
+    .comparison-col h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .comparison-col.us h3 { color: var(--green); }
+    .comparison-col.them h3 { color: var(--red); }
+
+    .comparison-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .comparison-col ul li {
+      padding-left: 28px;
+      position: relative;
+      font-size: 15px;
+      color: var(--white-65);
+      line-height: 1.5;
+    }
+
+    .comparison-col.us ul li::before {
+      content: "\2713";
+      position: absolute;
+      left: 0;
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    .comparison-col.them ul li::before {
+      content: "\2717";
+      position: absolute;
+      left: 0;
+      color: var(--red);
+      font-weight: 700;
+    }
+
+    /* About */
+    .about {
+      padding: 80px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .about h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(24px, 3.5vw, 38px);
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 30px;
+      font-style: italic;
+    }
+
+    .about-text {
+      max-width: 750px;
+      margin: 0 auto 40px;
+      text-align: center;
+      color: var(--white-65);
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .about-text strong { color: var(--white); font-weight: 700; }
+
+    .about-image {
+      max-width: 700px;
+      margin: 0 auto 40px;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    /* Case Studies */
+    .case-studies {
+      padding: 80px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .case-studies h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(24px, 3.5vw, 38px);
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .case-study-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .case-study-card {
+      background: var(--dark-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .case-study-card img {
+      width: 100%;
+    }
+
+    /* Calendly */
+    .calendly-section {
+      padding: 80px 0;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+
+    .calendly-section h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(24px, 3.5vw, 38px);
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+
+    .calendly-embed {
+      max-width: 700px;
+      margin: 0 auto;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #fff;
+      min-height: 700px;
+    }
+
+    /* Guarantee */
+    .guarantee {
+      padding: 60px 0;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+
+    .guarantee h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(20px, 3vw, 32px);
+      font-weight: 800;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.4;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 60px 0 40px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .footer-info {
+      font-size: 13px;
+      color: var(--white-40);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .footer-socials {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .footer-socials a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      transition: border-color 0.3s;
+    }
+
+    .footer-socials a:hover { border-color: var(--white-40); }
+    .footer-socials svg { width: 18px; height: 18px; fill: var(--white-65); }
+
+    .footer-copy {
+      font-size: 13px;
+      color: var(--white-40);
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .top-bar { font-size: 12px; }
+      .hero { padding: 20px 0 30px; }
+      .testimonial-grid { grid-template-columns: 1fr; }
+      .platform-logos { gap: 24px; }
+      .case-study-grid { grid-template-columns: 1fr; }
+      .partner-logos { gap: 30px; }
+      .partner-logos img { height: 35px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">For Shopify Stores Doing Over 7 Figures Per Year.</div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <span>BRAND</span><span>PENEUR</span>
+    </div>
+    <div class="rating">
+      <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span>Rated 4.9 by 100+ DTC Brands</span>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero container">
+    <h1>How to achieve <strong>predictable,</strong> <em>compounding</em> growth in 2026 using our <strong>Shopify growth system</strong></h1>
+  </section>
+
+  <!-- Video -->
+  <section class="container">
+    <div class="video-section">
+      <div class="video-wrapper">
+        <iframe src="https://fast.wistia.net/embed/iframe/v3w7nfidk6?seo=true&videoFoam=false" title="Brandpeneur Video" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="container">
+    <p class="cta-text">Let us show you how our Profit Formula works and how this done-for-you system scaled a Shopify brand from $12k per month to $188k per month in just five months.</p>
+    <div class="cta-center">
+      <a href="https://calendly.com/elliotpowell-ldm/free-consultation-call" class="btn">Book your Profit Clarity Call</a>
+    </div>
+  </section>
+
+  <!-- Platforms -->
+  <section class="platforms container">
+    <h2>We can execute the Profit Formula across the following platforms</h2>
+    <div class="platform-logos">
+      <div class="platform-logo">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.52 1.49-3.93 3.78-3.93 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02Z"/></svg>
+        Meta
+      </div>
+      <div class="platform-logo">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1Z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23Z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.02 10.02 0 0 0 2 12c0 1.61.39 3.14 1.07 4.49l3.77-2.4Z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53Z"/></svg>
+        Google
+      </div>
+      <div class="platform-logo">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1 0-5.78c.27 0 .54.04.8.1V9.01a6.35 6.35 0 0 0-1-.08 6.37 6.37 0 0 0-6.36 6.37A6.37 6.37 0 0 0 9.3 21.67a6.37 6.37 0 0 0 6.36-6.37V8.85a8.2 8.2 0 0 0 4.78 1.53V6.93c-.28 0-.57-.08-.85-.24Z"/></svg>
+        TikTok
+      </div>
+      <div class="platform-logo" style="font-size:18px; letter-spacing:0.15em; font-weight:800;">KLAVIYO</div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials container fade-in">
+    <h2>What it's actually like to work with us<br>according to our clients.</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="name">Patricia Fontaneda</div>
+        <div class="role">Co-Founder & Marketing Director of Ibiza Passion</div>
+        <div class="quote">"Brandpeneur go above and beyond, I look forward to growing with them and taking our jewelry brand to the next level."</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="name">Diania Di Maria</div>
+        <div class="role">Owner of Towelback &copy;</div>
+        <div class="quote">"With Brandpeneur we've had record that we'd not seen before!"</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="name">Cheryl Mann</div>
+        <div class="role">Owner of Bubbas Meltys</div>
+        <div class="quote">"Only just started working with the guys at Brandpeneur and I'm already seeing amazing results. Their communication is insane, I have nothing but great things to say about them and I'm excited for the future!"</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="name">Bastiaan Slot</div>
+        <div class="role">CEO/Founder of Appointmentsetter.com</div>
+        <div class="quote">"With Joshua's help we were immediately able to generate an additional $50k/month by running ads on Facebook and Instagram."</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="name">Paul Alex</div>
+        <div class="role">CEO/Founder of ATMTogether</div>
+        <div class="quote">"We've made over $100,000 a month for the past three months of working together."</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="name">Furkan Simsir</div>
+        <div class="role">Owner of Sir Studio / Channels Pro</div>
+        <div class="quote">"Looking back this was probably one of the best decisions I have ever made in my business."</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="name">Alex Emmerson</div>
+        <div class="role">Creator of the 10k Diva Method</div>
+        <div class="quote">"With our latest launch we've made &pound;27,000 off &pound;500 in adspend. Thank you so much!"</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="name">Ryan Wegner</div>
+        <div class="role">Founder/CEO of Predictable Clients</div>
+        <div class="quote">"We've gone from $0 to back to back $100,000 months with our Facebook ads."</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="name">Lenny Banks</div>
+        <div class="role">&nbsp;</div>
+        <div class="quote">"This kind of service is not common in this industry! I cannot recommend this enough."</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How We're Different -->
+  <section class="comparison container fade-in">
+    <h2>How we're different</h2>
+    <div class="comparison-grid">
+      <div class="comparison-col us">
+        <h3>Us</h3>
+        <ul>
+          <li>Full Customer Avatar Research</li>
+          <li>Conversion Rate Optimisation Audit</li>
+          <li>Full Creative Strategy and In-house creative team</li>
+          <li>Performance Reporting showing money spent and money made</li>
+          <li>Weekly video updates showing you everything you want to see and know</li>
+          <li>Done in-house by a fully trained, vetted A-team</li>
+        </ul>
+      </div>
+      <div class="comparison-col them">
+        <h3>Them</h3>
+        <ul>
+          <li>Using cookie cutter tactics and keeping their fingers crossed</li>
+          <li>No audit or conversion rate optimisation conducted</li>
+          <li>No creative direction or creative strategy</li>
+          <li>Vague reports that show vanity metrics i.e. clicks and CPMs</li>
+          <li>Endless meetings without direct action steps</li>
+          <li>Outsourced or handed down to a junior media buyer</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about container fade-in">
+    <h2>An agency that takes pride in doing a good job!</h2>
+    <div class="about-text">
+      <p>Many of us have grown weary of agencies that make grand promises and then leave us feeling in the dark.</p>
+      <br>
+      <p>At Brandpeneur, we firmly believe in providing not just exceptional service, but complete transparency as well. Our client case studies include some of the most prominent success stories in the eCommerce and Info-product industries, and we are proud to share them.</p>
+      <br>
+      <p>Whether our clients have seen a modest increase of $50,000 or an astounding &pound;5 million, we believe in being fully forthcoming about their achievements.</p>
+      <br>
+      <p><strong>We have no hidden secrets &mdash; just impressive client growth and brand expansion.</strong></p>
+    </div>
+    <div class="cta-center">
+      <a href="https://calendly.com/elliotpowell-ldm/free-consultation-call" class="btn">Book your Profit Clarity Call</a>
+    </div>
+  </section>
+
+  <!-- Case Studies -->
+  <section class="case-studies container fade-in">
+    <h2>Real results from real clients</h2>
+    <div class="case-study-grid">
+      <div class="case-study-card">
+        <img src="images/case-study-1.png" alt="Case Study - Meta Ads Manager results showing $193k in purchases" loading="lazy">
+      </div>
+      <div class="case-study-card">
+        <img src="images/case-study-2.png" alt="Case Study - Meta Ads Manager detailed breakdown" loading="lazy">
+      </div>
+      <div class="case-study-card">
+        <img src="images/case-study-3.png" alt="Case Study - Meta Ads Manager performance data" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Calendly Section -->
+  <section class="calendly-section container fade-in">
+    <h2>Ready to take your brand to the next level?</h2>
+    <div class="calendly-embed">
+      <iframe src="https://calendly.com/elliotpowell-ldm/free-consultation-call" width="100%" height="700" frameborder="0" title="Schedule a call"></iframe>
+    </div>
+  </section>
+
+  <!-- Guarantee -->
+  <section class="guarantee container fade-in">
+    <h2>REMEMBER: If we don't IMPROVE your performance you don't pay!</h2>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer container">
+    <div class="footer-info">
+      Marketing@brandpeneur.com<br>
+      Burgemeester Pabstlaan 10-B1<br>
+      2131XE Hoofddorp<br><br>
+      KvK: 88576655
+    </div>
+    <div class="footer-socials">
+      <a href="https://www.instagram.com/joshuadanielgeorge/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3Z"/></svg>
+      </a>
+      <a href="https://twitter.com/itsjoshuadaniel" target="_blank" rel="noopener" aria-label="X / Twitter">
+        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Brandpeneur B.V. | All rights reserved</div>
+  </footer>
+
+  <!-- Scroll animations -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+  <!-- Wistia embed support -->
+  <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+</body>
+</html>
