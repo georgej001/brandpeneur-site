@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brandpeneur | Digital Marketing for eCommerce</title>
+  <title>Brandpeneur | Predictable Profit for Shopify Brands</title>
   <meta name="description" content="The Profit System 7 & 8-Figure Brands Use to Scale Smarter, Not Louder. We'll plug you into our proven funnel to scale with Meta ads.">
   <link rel="icon" href="favicon.ico">
 
@@ -22,13 +22,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
     :root {
       --teal: #18C5C9;
       --teal-dark: #11a0a3;
-      --teal-light: rgba(24, 197, 201, 0.08);
-      --teal-border: rgba(24, 197, 201, 0.25);
-      --teal-glow: rgba(24, 197, 201, 0.15);
+      --teal-light: rgba(24,197,201,0.08);
+      --teal-border: rgba(24,197,201,0.25);
+      --teal-glow: rgba(24,197,201,0.15);
       --black: #000000;
       --dark: #0a0a0a;
       --dark-section: #111114;
@@ -40,775 +39,271 @@
       --border: #e8e8f0;
       --border-dark: rgba(255,255,255,0.1);
       --gold: #f5c518;
+      --red: #e74c3c;
     }
-
     html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--black);
-      color: var(--white);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-    }
-
+    body { font-family: 'DM Sans', sans-serif; background: var(--black); color: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
     img { max-width: 100%; height: auto; display: block; }
     a { color: inherit; text-decoration: none; }
-    h1, h2, h3, h4, h5, h6 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    h1,h2,h3,h4,h5,h6 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
+    /* ANNOUNCEMENT BAR */
+    .announcement-bar { background: var(--dark); text-align: center; padding: 10px 16px; font-size: 13px; color: var(--text-muted); border-bottom: 1px solid var(--border-dark); }
+    .announcement-bar a { color: var(--teal); text-decoration: underline; font-weight: 500; }
+    .announcement-bar .spots { color: var(--teal); font-weight: 600; }
+    .announcement-bar .countdown { color: var(--white); font-weight: 700; font-variant-numeric: tabular-nums; }
 
-    /* ====== ANNOUNCEMENT BAR ====== */
-    .announcement-bar {
-      background: var(--dark);
-      text-align: center;
-      padding: 10px 16px;
-      font-size: 13px;
-      color: var(--text-muted);
-      border-bottom: 1px solid var(--border-dark);
-    }
-    .announcement-bar a {
-      color: var(--teal);
-      text-decoration: underline;
-      font-weight: 500;
-    }
-
-    /* ====== NAVBAR ====== */
-    .navbar {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(0,0,0,0.85);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border-dark);
-      padding: 16px 0;
-    }
-
-    .navbar .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .nav-logo {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 22px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
+    /* NAVBAR */
+    .navbar { position: sticky; top: 0; z-index: 100; background: rgba(0,0,0,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-dark); padding: 16px 0; }
+    .navbar .container { display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 22px; letter-spacing: 0.08em; text-transform: uppercase; }
     .nav-logo span:first-child { font-weight: 800; }
     .nav-logo span:last-child { font-weight: 300; }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 32px;
-    }
-
-    .nav-links a {
-      font-size: 14px;
-      font-weight: 500;
-      color: rgba(255,255,255,0.7);
-      transition: color 0.3s;
-    }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a { font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.7); transition: color 0.3s; }
     .nav-links a:hover { color: var(--white); }
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--teal);
-      color: var(--black);
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-weight: 700;
-      font-size: 14px;
-      padding: 12px 24px;
-      border-radius: 50px;
-      transition: all 0.3s;
-      cursor: pointer;
-      border: none;
-      white-space: nowrap;
-    }
+    /* BUTTONS */
+    .btn { display: inline-flex; align-items: center; gap: 8px; background: var(--teal); color: var(--black); font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 14px; padding: 12px 24px; border-radius: 50px; transition: all 0.3s; cursor: pointer; border: none; white-space: nowrap; }
     .btn:hover { background: var(--teal-dark); transform: translateY(-1px); }
-    .btn-arrow::after { content: "\2192"; }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--teal);
-      border: 2px solid var(--teal);
-    }
+    .btn-arrow::after { content: " \2192"; }
+    .btn-outline { background: transparent; color: var(--teal); border: 2px solid var(--teal); }
     .btn-outline:hover { background: var(--teal); color: var(--black); }
-
-    .btn-dark {
-      background: var(--text-primary);
-      color: var(--white);
-    }
+    .btn-dark { background: var(--text-primary); color: var(--white); }
     .btn-dark:hover { background: #2a2a3e; }
+    .btn-white { background: var(--white); color: var(--text-primary); }
+    .btn-white:hover { background: #f0f0f0; }
+    .btn-lg { font-size: 16px; padding: 16px 36px; }
 
-    /* ====== RATING BADGE ====== */
-    .rating-badge {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      background: var(--teal);
-      color: var(--black);
-      padding: 10px 24px;
-      border-radius: 50px;
-      font-size: 14px;
-      font-weight: 600;
-      width: fit-content;
-      margin: 30px auto 0;
-    }
+    /* HERO */
+    .hero { text-align: center; padding: 40px 0 30px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--teal-light); border: 1px solid var(--teal-border); color: var(--teal); padding: 8px 20px; border-radius: 50px; font-size: 13px; font-weight: 600; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(30px,4.5vw,52px); font-weight: 800; line-height: 1.15; max-width: 750px; margin: 0 auto; letter-spacing: -0.02em; }
+    .hero-sub { font-size: 16px; color: rgba(255,255,255,0.6); margin-top: 20px; line-height: 1.6; }
+    .hero-sub strong { color: var(--white); font-weight: 600; }
+    .hero .btn { margin-top: 28px; }
+    .hero-note { font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 12px; }
+
+    /* HERO STATS */
+    .hero-stats { display: flex; justify-content: center; gap: 48px; margin-top: 40px; flex-wrap: wrap; }
+    .hero-stat { text-align: center; }
+    .hero-stat .hs-value { font-size: 28px; font-weight: 800; color: var(--teal); }
+    .hero-stat .hs-label { font-size: 12px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; }
+
+    /* RATING */
+    .rating-badge { display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--teal); color: var(--black); padding: 10px 24px; border-radius: 50px; font-size: 14px; font-weight: 600; width: fit-content; margin: 30px auto 0; }
     .rating-badge .stars { color: var(--black); letter-spacing: 2px; }
 
-    /* ====== HERO ====== */
-    .hero {
-      text-align: center;
-      padding: 40px 0 30px;
-    }
+    /* CREATIVE SHOWCASE */
+    .creative-showcase { padding: 50px 0; overflow: hidden; }
+    .showcase-track { display: flex; gap: 16px; animation: scroll-left 30s linear infinite; width: max-content; }
+    .showcase-track img { width: 280px; height: 280px; object-fit: cover; border-radius: 16px; flex-shrink: 0; }
+    @keyframes scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-    .hero h1 {
-      font-size: clamp(30px, 4.5vw, 52px);
-      font-weight: 800;
-      line-height: 1.15;
-      max-width: 750px;
-      margin: 24px auto 0;
-      letter-spacing: -0.02em;
-    }
+    /* TRUST SECTION */
+    .trust-section { background: var(--white); color: var(--text-primary); padding: 80px 0; }
+    .trust-text { text-align: center; max-width: 700px; margin: 0 auto; font-size: 20px; line-height: 1.7; color: var(--text-secondary); }
+    .trust-text .highlight { background: var(--teal-light); border: 1px solid var(--teal-border); color: var(--teal-dark); padding: 2px 10px; border-radius: 6px; font-weight: 600; display: inline-block; }
+    .trust-logos { display: flex; align-items: center; justify-content: center; gap: 40px; margin-top: 50px; flex-wrap: wrap; opacity: 0.4; }
+    .trust-logos img { height: 30px; width: auto; filter: grayscale(100%); }
 
-    .hero-sub {
-      font-size: 16px;
-      color: rgba(255,255,255,0.6);
-      margin-top: 20px;
-      line-height: 1.6;
-    }
+    /* CALL VALUE SECTION */
+    .call-value { background: var(--off-white); color: var(--text-primary); padding: 80px 0; }
+    .call-value h2 { font-size: clamp(24px,3.5vw,38px); font-weight: 800; text-align: center; margin-bottom: 50px; }
+    .call-value-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; }
+    .call-value-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 28px; text-align: center; }
+    .call-value-card .cvc-icon { font-size: 32px; margin-bottom: 16px; }
+    .call-value-card h4 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+    .call-value-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
 
-    .hero-sub strong {
-      color: var(--white);
-      font-weight: 600;
-    }
+    /* PAIN POINTS */
+    .pain-section { background: var(--dark-section); padding: 100px 0; }
+    .pain-section h2 { font-size: clamp(28px,3.5vw,42px); font-weight: 800; text-align: center; margin-bottom: 12px; }
+    .pain-section .pain-sub { text-align: center; color: rgba(255,255,255,0.5); font-size: 16px; margin-bottom: 50px; }
+    .pain-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; }
+    .pain-card { background: rgba(255,255,255,0.03); border: 1px solid var(--border-dark); border-radius: 16px; padding: 32px; }
+    .pain-card .pain-icon { font-size: 28px; margin-bottom: 12px; }
+    .pain-card h4 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .pain-card p { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.6; }
 
-    .hero .btn {
-      margin-top: 28px;
-      font-size: 16px;
-      padding: 16px 36px;
-    }
+    /* PROFIT FORMULA */
+    .formula-section { background: var(--white); color: var(--text-primary); padding: 100px 0; }
+    .formula-section h2 { font-size: clamp(28px,3.5vw,42px); font-weight: 800; text-align: center; margin-bottom: 12px; }
+    .formula-section .formula-sub { text-align: center; color: var(--text-secondary); font-size: 16px; margin-bottom: 60px; }
+    .formula-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px; }
+    .formula-card { padding: 32px; border: 1px solid var(--border); border-radius: 20px; }
+    .formula-card .fc-num { font-size: 14px; font-weight: 800; color: var(--teal); margin-bottom: 12px; }
+    .formula-card h3 { font-size: 22px; font-weight: 800; margin-bottom: 12px; }
+    .formula-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
 
-    /* ====== CREATIVE SHOWCASE ====== */
-    .creative-showcase {
-      padding: 50px 0;
-      overflow: hidden;
-    }
+    /* CASE STUDIES */
+    .case-studies-section { background: var(--off-white); color: var(--text-primary); padding: 100px 0; }
+    .case-studies-section h2 { font-size: clamp(28px,3.5vw,42px); font-weight: 800; text-align: center; margin-bottom: 12px; }
+    .case-studies-section .cs-sub { text-align: center; color: var(--text-secondary); font-size: 16px; margin-bottom: 60px; }
+    .case-study-card { background: var(--white); border: 1px solid var(--border); border-radius: 24px; padding: 40px; margin-bottom: 32px; }
+    .cs-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 12px; }
+    .cs-label { font-size: 13px; font-weight: 600; color: var(--text-secondary); }
+    .cs-tag { font-size: 12px; background: var(--off-white); border: 1px solid var(--border); padding: 4px 12px; border-radius: 20px; color: var(--text-muted); }
+    .cs-headline { font-size: clamp(24px,3vw,36px); font-weight: 800; margin-bottom: 24px; }
+    .cs-headline span { color: var(--teal); }
+    .cs-stats { display: flex; gap: 24px; margin-bottom: 24px; flex-wrap: wrap; }
+    .cs-stat { flex: 1; min-width: 120px; background: var(--off-white); border: 1px solid var(--border); border-radius: 12px; padding: 20px; text-align: center; }
+    .cs-stat .csv { font-size: 24px; font-weight: 800; color: var(--teal); }
+    .cs-stat .csl { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-top: 4px; }
+    .cs-image { border-radius: 12px; overflow: hidden; border: 1px solid var(--border); margin-bottom: 24px; }
 
-    .showcase-track {
-      display: flex;
-      gap: 16px;
-      animation: scroll-left 30s linear infinite;
-      width: max-content;
-    }
+    /* COMPARISON */
+    .comparison-section { background: var(--dark-section); padding: 100px 0; }
+    .comparison-section h2 { font-size: clamp(28px,3.5vw,42px); font-weight: 800; text-align: center; margin-bottom: 60px; }
+    .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 950px; margin: 0 auto; }
+    .comp-col { background: rgba(255,255,255,0.03); border: 1px solid var(--border-dark); border-radius: 20px; padding: 36px; }
+    .comp-col.us { border-color: var(--teal-border); }
+    .comp-col h3 { font-size: 20px; font-weight: 700; margin-bottom: 24px; display: flex; align-items: center; gap: 8px; }
+    .comp-col.us h3 { color: var(--teal); }
+    .comp-col.them h3 { color: var(--red); }
+    .comp-col ul { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+    .comp-col ul li { font-size: 14px; color: rgba(255,255,255,0.6); padding-left: 28px; position: relative; line-height: 1.5; }
+    .comp-col.us ul li::before { content: "\2713"; position: absolute; left: 0; color: var(--teal); font-weight: 700; }
+    .comp-col.them ul li::before { content: "\2717"; position: absolute; left: 0; color: var(--red); font-weight: 700; }
 
-    .showcase-track img {
-      width: 280px;
-      height: 280px;
-      object-fit: cover;
-      border-radius: 16px;
-      flex-shrink: 0;
-    }
+    /* TESTIMONIALS */
+    .testimonials-section { background: var(--dark-section); padding: 100px 0; border-top: 1px solid var(--border-dark); }
+    .testimonials-section h2 { font-size: clamp(28px,3.5vw,42px); font-weight: 800; text-align: center; margin-bottom: 60px; }
+    .testimonial-cards { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; max-width: 900px; margin: 0 auto; }
+    .testimonial-card { background: rgba(255,255,255,0.03); border: 1px solid var(--border-dark); border-radius: 20px; padding: 32px; }
+    .tc-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+    .tc-avatar { width: 48px; height: 48px; border-radius: 50%; background: var(--teal); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px; color: var(--black); flex-shrink: 0; }
+    .tc-info .tc-name { font-weight: 700; font-size: 16px; }
+    .tc-info .tc-role { font-size: 12px; color: rgba(255,255,255,0.4); }
+    .tc-stars { color: var(--gold); font-size: 14px; letter-spacing: 2px; margin-bottom: 12px; }
+    .tc-quote { font-style: italic; color: rgba(255,255,255,0.65); font-size: 15px; line-height: 1.6; }
 
-    @keyframes scroll-left {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
+    /* VIDEO TESTIMONIALS */
+    .video-testimonials { background: var(--white); color: var(--text-primary); padding: 100px 0; }
+    .video-testimonials h2 { font-size: clamp(28px,3.5vw,42px); font-weight: 800; text-align: center; margin-bottom: 12px; }
+    .video-testimonials .vt-sub { text-align: center; color: var(--text-secondary); margin-bottom: 50px; }
+    .vt-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    .vt-card { border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+    .vt-placeholder { background: var(--off-white); aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; font-size: 48px; cursor: pointer; }
+    .vt-card .vt-info { padding: 16px; }
+    .vt-card .vt-info h4 { font-size: 15px; font-weight: 700; }
+    .vt-card .vt-info p { font-size: 13px; color: var(--text-muted); }
 
-    /* ====== TRUST SECTION (Light) ====== */
-    .trust-section {
-      background: var(--white);
-      color: var(--text-primary);
-      padding: 80px 0;
-    }
-
-    .trust-text {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto;
-      font-size: 20px;
-      line-height: 1.7;
-      color: var(--text-secondary);
-    }
-
-    .trust-text .highlight {
-      background: var(--teal-light);
-      border: 1px solid var(--teal-border);
-      color: var(--teal-dark);
-      padding: 2px 10px;
-      border-radius: 6px;
-      font-weight: 600;
-      display: inline-block;
-    }
-
-    .trust-logos {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 40px;
-      margin-top: 50px;
-      flex-wrap: wrap;
-      opacity: 0.4;
-    }
-
-    .trust-logos img {
-      height: 30px;
-      width: auto;
-      filter: grayscale(100%);
-    }
-
-    /* ====== SCALE SECTION (Dark) ====== */
-    .scale-section {
-      background: var(--dark-section);
-      padding: 100px 0;
-      text-align: center;
-    }
-
-    .scale-section h2 {
-      font-size: clamp(28px, 4vw, 48px);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-    }
-
-    .flower-graphic {
-      width: 200px;
-      height: 200px;
-      margin: 50px auto;
-      position: relative;
-    }
-
-    .petal {
-      position: absolute;
-      width: 80px;
-      height: 120px;
-      border-radius: 50%;
-      opacity: 0.7;
-    }
-    .petal:nth-child(1) { background: #0d4f4f; top: 0; left: 50%; transform: translateX(-50%) rotate(0deg); transform-origin: bottom center; }
-    .petal:nth-child(2) { background: #1a7a7a; top: 0; left: 50%; transform: translateX(-50%) rotate(60deg); transform-origin: bottom center; }
-    .petal:nth-child(3) { background: var(--teal); top: 0; left: 50%; transform: translateX(-50%) rotate(120deg); transform-origin: bottom center; }
-    .petal:nth-child(4) { background: #0d4f4f; top: 0; left: 50%; transform: translateX(-50%) rotate(180deg); transform-origin: bottom center; }
-    .petal:nth-child(5) { background: #1a7a7a; top: 0; left: 50%; transform: translateX(-50%) rotate(240deg); transform-origin: bottom center; }
-    .petal:nth-child(6) { background: var(--teal); top: 0; left: 50%; transform: translateX(-50%) rotate(300deg); transform-origin: bottom center; }
-
-    .stats-row {
-      display: flex;
-      justify-content: center;
-      gap: 60px;
-      margin-top: 50px;
-      flex-wrap: wrap;
-    }
-
-    .stat-box {
-      text-align: center;
-    }
-
-    .stat-box .label {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: rgba(255,255,255,0.5);
-      margin-bottom: 4px;
-    }
-
-    .stat-box .value {
-      font-size: 24px;
-      font-weight: 700;
-    }
-
-    /* ====== ABOUT SECTION (Light) ====== */
-    .about-section {
-      background: var(--white);
-      color: var(--text-primary);
-      padding: 100px 0;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    @media (max-width: 768px) {
-      .about-grid { grid-template-columns: 1fr; }
-    }
-
-    .about-section h2 {
-      font-size: clamp(24px, 3.5vw, 36px);
-      font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 24px;
-    }
-
-    .about-section p {
-      color: var(--text-secondary);
-      font-size: 16px;
-      line-height: 1.8;
-      margin-bottom: 16px;
-    }
-
-    .about-section p strong {
-      color: var(--text-primary);
-      font-weight: 700;
-    }
-
-    .about-image {
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-    }
-
-    /* ====== PROCESS SECTION (Dark) ====== */
-    .process-section {
-      background: var(--dark-section);
-      padding: 100px 0;
-    }
-
-    .process-section h2 {
-      font-size: clamp(28px, 3.5vw, 42px);
-      font-weight: 800;
-      text-align: center;
-      margin-bottom: 60px;
-    }
-
-    .process-steps {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      overflow-x: auto;
-      padding-bottom: 10px;
-    }
-
-    .process-step {
-      flex: 1;
-      min-width: 180px;
-      text-align: center;
-      position: relative;
-    }
-
-    .process-step .step-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
-      background: var(--teal-light);
-      border: 1px solid var(--teal-border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 16px;
-      font-size: 20px;
-    }
-
-    .process-step h4 {
-      font-size: 16px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .process-step p {
-      font-size: 13px;
-      color: rgba(255,255,255,0.5);
-      line-height: 1.5;
-    }
-
-    .process-step::after {
-      content: "";
-      position: absolute;
-      top: 24px;
-      right: -8px;
-      width: 16px;
-      height: 2px;
-      background: var(--border-dark);
-    }
-
+    /* PROCESS */
+    .process-section { background: var(--dark-section); padding: 100px 0; }
+    .process-section h2 { font-size: clamp(28px,3.5vw,42px); font-weight: 800; text-align: center; margin-bottom: 60px; }
+    .process-steps { display: flex; justify-content: space-between; gap: 16px; overflow-x: auto; padding-bottom: 10px; }
+    .process-step { flex: 1; min-width: 180px; text-align: center; position: relative; }
+    .process-step .step-icon { width: 48px; height: 48px; border-radius: 12px; background: var(--teal-light); border: 1px solid var(--teal-border); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 20px; }
+    .process-step h4 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+    .process-step p { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.5; }
+    .process-step::after { content: ""; position: absolute; top: 24px; right: -8px; width: 16px; height: 2px; background: var(--border-dark); }
     .process-step:last-child::after { display: none; }
 
-    /* ====== SERVICES SECTION (Light) ====== */
-    .services-section {
-      background: var(--white);
-      color: var(--text-primary);
-      padding: 100px 0;
-    }
+    /* SERVICES */
+    .services-section { background: var(--white); color: var(--text-primary); padding: 100px 0; }
+    .services-section h2 { font-size: clamp(28px,3.5vw,42px); font-weight: 800; text-align: center; margin-bottom: 60px; }
+    .services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    .service-card { border: 1px solid var(--border); border-radius: 20px; padding: 36px; display: flex; flex-direction: column; position: relative; background: var(--white); transition: box-shadow 0.3s; }
+    .service-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
+    .service-card .badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--teal); color: var(--black); font-size: 11px; font-weight: 700; padding: 4px 16px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .service-card h3 { font-size: 22px; font-weight: 800; margin-bottom: 12px; }
+    .service-card .desc { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px; }
+    .service-card .includes-label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); font-weight: 600; margin-bottom: 12px; }
+    .service-card ul { list-style: none; margin-bottom: 24px; flex-grow: 1; }
+    .service-card ul li { font-size: 14px; color: var(--text-secondary); padding: 6px 0 6px 24px; position: relative; }
+    .service-card ul li::before { content: "\2713"; position: absolute; left: 0; color: var(--teal); font-weight: 700; }
+    .service-card .btn { width: 100%; justify-content: center; margin-top: auto; }
 
-    .services-section h2 {
-      font-size: clamp(28px, 3.5vw, 42px);
-      font-weight: 800;
-      text-align: center;
-      margin-bottom: 60px;
-    }
+    /* ABOUT */
+    .about-section { background: var(--white); color: var(--text-primary); padding: 100px 0; border-top: 1px solid var(--border); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .about-section h2 { font-size: clamp(24px,3.5vw,36px); font-weight: 800; line-height: 1.2; margin-bottom: 24px; }
+    .about-section p { color: var(--text-secondary); font-size: 16px; line-height: 1.8; margin-bottom: 16px; }
+    .about-section p strong { color: var(--text-primary); font-weight: 700; }
+    .about-image { border-radius: 16px; overflow: hidden; border: 1px solid var(--border); }
 
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
+    /* FAQ */
+    .faq-section { background: var(--white); color: var(--text-primary); padding: 100px 0; border-top: 1px solid var(--border); }
+    .faq-section h2 { font-size: clamp(28px,3.5vw,42px); font-weight: 800; text-align: center; margin-bottom: 50px; }
+    .faq-list { max-width: 800px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-question { width: 100%; text-align: left; background: none; border: none; padding: 20px 40px 20px 0; font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 600; color: var(--text-primary); cursor: pointer; position: relative; line-height: 1.5; }
+    .faq-question::after { content: "+"; position: absolute; right: 0; top: 50%; transform: translateY(-50%); font-size: 24px; font-weight: 300; color: var(--text-muted); }
+    .faq-item.open .faq-question::after { content: "\2212"; }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .faq-item.open .faq-answer { max-height: 300px; padding-bottom: 20px; }
+    .faq-answer p { font-size: 15px; color: var(--text-secondary); line-height: 1.7; }
 
-    @media (max-width: 900px) {
-      .services-grid { grid-template-columns: 1fr; }
-    }
+    /* FINAL CTA */
+    .final-cta { background: var(--dark-section); padding: 100px 0; text-align: center; border-top: 1px solid var(--border-dark); }
+    .final-cta .shield { font-size: 48px; margin-bottom: 20px; }
+    .final-cta h2 { font-size: clamp(28px,3.5vw,42px); font-weight: 800; max-width: 700px; margin: 0 auto 16px; }
+    .final-cta .cta-desc { color: rgba(255,255,255,0.5); font-size: 16px; margin-bottom: 8px; }
+    .final-cta .guarantee { color: var(--teal); font-weight: 600; font-size: 15px; margin-bottom: 24px; }
+    .final-cta .cta-note { color: rgba(255,255,255,0.4); font-size: 13px; margin-top: 16px; }
+    .final-cta .spots-note { color: rgba(255,255,255,0.5); font-size: 14px; margin-top: 12px; }
+    .final-cta .spots-note strong { color: var(--teal); }
 
-    .service-card {
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 36px;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      background: var(--white);
-      transition: box-shadow 0.3s;
-    }
-
-    .service-card:hover {
-      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-    }
-
-    .service-card .badge {
-      position: absolute;
-      top: -12px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--teal);
-      color: var(--black);
-      font-size: 11px;
-      font-weight: 700;
-      padding: 4px 16px;
-      border-radius: 20px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .service-card h3 {
-      font-size: 22px;
-      font-weight: 800;
-      margin-bottom: 12px;
-    }
-
-    .service-card .desc {
-      font-size: 14px;
-      color: var(--text-secondary);
-      line-height: 1.6;
-      margin-bottom: 24px;
-    }
-
-    .service-card .includes-label {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-muted);
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
-
-    .service-card ul {
-      list-style: none;
-      margin-bottom: 24px;
-      flex-grow: 1;
-    }
-
-    .service-card ul li {
-      font-size: 14px;
-      color: var(--text-secondary);
-      padding: 6px 0 6px 24px;
-      position: relative;
-    }
-
-    .service-card ul li::before {
-      content: "\2713";
-      position: absolute;
-      left: 0;
-      color: var(--teal);
-      font-weight: 700;
-    }
-
-    .service-card .btn {
-      width: 100%;
-      justify-content: center;
-      margin-top: auto;
-    }
-
-    /* ====== TESTIMONIALS (Dark) ====== */
-    .testimonials-section {
-      background: var(--dark-section);
-      padding: 100px 0;
-    }
-
-    .testimonials-section h2 {
-      font-size: clamp(28px, 3.5vw, 42px);
-      font-weight: 800;
-      text-align: center;
-      margin-bottom: 60px;
-    }
-
-    .testimonial-cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    @media (max-width: 900px) {
-      .testimonial-cards { grid-template-columns: 1fr; }
-    }
-
-    .testimonial-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid var(--border-dark);
-      border-radius: 20px;
-      padding: 32px;
-      text-align: center;
-    }
-
-    .testimonial-card .avatar {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin: 0 auto 16px;
-      border: 2px solid var(--border-dark);
-    }
-
-    .testimonial-card .tc-name {
-      font-weight: 700;
-      font-size: 18px;
-      margin-bottom: 4px;
-    }
-
-    .testimonial-card .tc-role {
-      font-size: 13px;
-      color: rgba(255,255,255,0.4);
-      margin-bottom: 16px;
-    }
-
-    .testimonial-card .tc-quote {
-      font-style: italic;
-      color: rgba(255,255,255,0.65);
-      font-size: 15px;
-      line-height: 1.6;
-      margin-bottom: 24px;
-    }
-
-    .testimonial-stats {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .testimonial-stats .ts-item {
-      text-align: center;
-    }
-
-    .testimonial-stats .ts-value {
-      font-size: 20px;
-      font-weight: 800;
-      color: var(--teal);
-    }
-
-    .testimonial-stats .ts-label {
-      font-size: 11px;
-      color: rgba(255,255,255,0.4);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    /* ====== FAQ (Light) ====== */
-    .faq-section {
-      background: var(--white);
-      color: var(--text-primary);
-      padding: 100px 0;
-    }
-
-    .faq-section h2 {
-      font-size: clamp(28px, 3.5vw, 42px);
-      font-weight: 800;
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
-    .faq-list {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .faq-item {
-      border-bottom: 1px solid var(--border);
-    }
-
-    .faq-question {
-      width: 100%;
-      text-align: left;
-      background: none;
-      border: none;
-      padding: 20px 40px 20px 0;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--text-primary);
-      cursor: pointer;
-      position: relative;
-      line-height: 1.5;
-    }
-
-    .faq-question::after {
-      content: "+";
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 24px;
-      font-weight: 300;
-      color: var(--text-muted);
-      transition: transform 0.3s;
-    }
-
-    .faq-item.open .faq-question::after {
-      content: "\2212";
-    }
-
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease, padding 0.3s ease;
-    }
-
-    .faq-item.open .faq-answer {
-      max-height: 300px;
-      padding-bottom: 20px;
-    }
-
-    .faq-answer p {
-      font-size: 15px;
-      color: var(--text-secondary);
-      line-height: 1.7;
-    }
-
-    /* ====== FOOTER ====== */
-    .footer {
-      background: var(--black);
-      border-top: 1px solid var(--border-dark);
-      padding: 60px 0 40px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr;
-      gap: 40px;
-    }
-
-    @media (max-width: 768px) {
-      .footer-grid { grid-template-columns: 1fr; }
-    }
-
-    .footer-brand .nav-logo {
-      margin-bottom: 16px;
-    }
-
-    .footer-brand p {
-      font-size: 14px;
-      color: rgba(255,255,255,0.4);
-      margin-bottom: 20px;
-    }
-
-    .newsletter-form {
-      display: flex;
-      gap: 8px;
-    }
-
-    .newsletter-form input {
-      flex: 1;
-      padding: 12px 16px;
-      border-radius: 50px;
-      border: 1px solid var(--border-dark);
-      background: rgba(255,255,255,0.05);
-      color: var(--white);
-      font-size: 14px;
-      outline: none;
-      font-family: 'DM Sans', sans-serif;
-    }
-
+    /* FOOTER */
+    .footer { background: var(--black); border-top: 1px solid var(--border-dark); padding: 60px 0 40px; }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 40px; }
+    .footer-brand .nav-logo { margin-bottom: 16px; }
+    .footer-brand p { font-size: 14px; color: rgba(255,255,255,0.4); margin-bottom: 20px; }
+    .newsletter-form { display: flex; gap: 8px; }
+    .newsletter-form input { flex: 1; padding: 12px 16px; border-radius: 50px; border: 1px solid var(--border-dark); background: rgba(255,255,255,0.05); color: var(--white); font-size: 14px; outline: none; font-family: 'DM Sans', sans-serif; }
     .newsletter-form input::placeholder { color: rgba(255,255,255,0.3); }
     .newsletter-form input:focus { border-color: var(--teal); }
-
-    .newsletter-form .btn {
-      font-size: 13px;
-      padding: 12px 20px;
-    }
-
-    .footer-col h4 {
-      font-size: 14px;
-      font-weight: 700;
-      margin-bottom: 16px;
-      color: rgba(255,255,255,0.6);
-    }
-
-    .footer-col a {
-      display: block;
-      font-size: 14px;
-      color: rgba(255,255,255,0.4);
-      padding: 4px 0;
-      transition: color 0.3s;
-    }
-
+    .newsletter-form .btn { font-size: 13px; padding: 12px 20px; }
+    .footer-col h4 { font-size: 14px; font-weight: 700; margin-bottom: 16px; color: rgba(255,255,255,0.6); }
+    .footer-col a { display: block; font-size: 14px; color: rgba(255,255,255,0.4); padding: 4px 0; transition: color 0.3s; }
     .footer-col a:hover { color: var(--white); }
+    .footer-bottom { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border-dark); text-align: center; font-size: 13px; color: rgba(255,255,255,0.3); }
 
-    .footer-bottom {
-      margin-top: 40px;
-      padding-top: 20px;
-      border-top: 1px solid var(--border-dark);
-      text-align: center;
-      font-size: 13px;
-      color: rgba(255,255,255,0.3);
-    }
+    /* EXIT POPUP */
+    .exit-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 9999; align-items: center; justify-content: center; backdrop-filter: blur(4px); }
+    .exit-overlay.show { display: flex; }
+    .exit-popup { background: var(--white); color: var(--text-primary); border-radius: 24px; padding: 48px; max-width: 480px; width: 90%; text-align: center; position: relative; }
+    .exit-popup .close-popup { position: absolute; top: 16px; right: 16px; background: none; border: none; font-size: 24px; cursor: pointer; color: var(--text-muted); }
+    .exit-popup .ep-tag { font-size: 12px; font-weight: 700; color: var(--red); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; }
+    .exit-popup h3 { font-size: 28px; font-weight: 800; margin-bottom: 12px; }
+    .exit-popup p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px; }
+    .exit-popup .btn { width: 100%; justify-content: center; font-size: 16px; padding: 16px; }
+    .exit-popup .ep-note { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
 
-    /* ====== FADE ANIMATIONS ====== */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    /* SOCIAL PROOF TOAST */
+    .toast { position: fixed; bottom: 24px; left: 24px; background: var(--white); color: var(--text-primary); padding: 14px 20px; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.15); font-size: 14px; z-index: 1000; transform: translateX(-120%); transition: transform 0.4s ease; max-width: 340px; }
+    .toast.show { transform: translateX(0); }
+    .toast .toast-time { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
 
-    /* ====== MOBILE NAV ====== */
-    .mobile-menu-btn {
-      display: none;
-      background: none;
-      border: none;
-      color: var(--white);
-      font-size: 24px;
-      cursor: pointer;
-    }
+    /* FADE */
+    .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
 
+    /* MOBILE */
+    .mobile-menu-btn { display: none; background: none; border: none; color: var(--white); font-size: 24px; cursor: pointer; }
+    @media (max-width: 900px) {
+      .call-value-grid { grid-template-columns: repeat(2,1fr); }
+      .pain-grid { grid-template-columns: 1fr; }
+      .formula-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .vt-grid { grid-template-columns: 1fr; }
+      .comparison-grid { grid-template-columns: 1fr; }
+      .testimonial-cards { grid-template-columns: 1fr; }
+    }
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .mobile-menu-btn { display: block; }
-      .nav-links.open {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: var(--black);
-        padding: 20px 24px;
-        border-bottom: 1px solid var(--border-dark);
-      }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--black); padding: 20px 24px; border-bottom: 1px solid var(--border-dark); }
       .showcase-track img { width: 200px; height: 200px; }
       .process-steps { gap: 24px; }
       .process-step::after { display: none; }
+      .about-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .hero-stats { gap: 24px; }
+      .cs-stats { flex-direction: column; }
+      .call-value-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -816,7 +311,7 @@
 
   <!-- Announcement Bar -->
   <div class="announcement-bar">
-    Find out what's costing you money. <a href="https://calendly.com/elliotpowell-ldm/free-consultation-call">Get your free audit &rarr;</a>
+    <span class="spots">2 of 3 client spots remaining this month.</span> Intake closes in <span class="countdown" id="countdown">--:--:--</span> &mdash; <a href="https://calendly.com/elliotpowell-ldm/free-consultation-call">Check availability &rarr;</a>
   </div>
 
   <!-- Navbar -->
@@ -826,27 +321,32 @@
       <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
       <div class="nav-links">
         <a href="#case-studies">Case Studies</a>
-        <a href="https://calendly.com/elliotpowell-ldm/free-consultation-call" class="btn btn-arrow">Book Your Profit Clarity Call</a>
+        <a href="https://calendly.com/elliotpowell-ldm/free-consultation-call" class="btn btn-arrow">Book Your Free Profit Audit</a>
       </div>
     </div>
   </nav>
 
-  <!-- Rating Badge -->
-  <div class="rating-badge">
-    <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-    <span>4.9 Rated by 100+ DTC Brands</span>
-  </div>
-
   <!-- Hero -->
   <section class="hero container">
-    <h1>The Profit System 7 & 8-Figure Brands Use to Scale Smarter, Not Louder</h1>
-    <p class="hero-sub">Scaling <strong>$10k - $250k/month</strong> brands to the moon.<br>We'll plug you into our proven funnel to scale with Meta ads.</p>
-    <a href="https://calendly.com/elliotpowell-ldm/free-consultation-call" class="btn btn-arrow">Book Your Profit Clarity Call</a>
+    <div class="hero-badge">&#9889; Built for Scaling Shopify Brands</div>
+    <h1>Your Shopify brand should be doing $100k+ months. We'll show you exactly how.</h1>
+    <div class="rating-badge" style="margin-top:20px;">
+      <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span>Rated 4.9 by 100+ DTC Brands</span>
+    </div>
+    <p class="hero-sub">"Our Profit Formula is a done-for-you Meta Ads, creative, and CRO system that's generated <strong>$2.4M+</strong> for DTC brands &mdash; and it compounds every month."</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hs-value">$2.4M+</div><div class="hs-label">Revenue Generated</div></div>
+      <div class="hero-stat"><div class="hs-value">32+</div><div class="hs-label">Brands Scaled</div></div>
+      <div class="hero-stat"><div class="hs-value">4.2x</div><div class="hs-label">Avg. ROAS</div></div>
+    </div>
+    <a href="https://calendly.com/elliotpowell-ldm/free-consultation-call" class="btn btn-lg btn-arrow">Book Your Free Profit Audit</a>
+    <p class="hero-note">You'll speak with Elliot, our Head of Partnerships.</p>
   </section>
 
   <!-- Creative Showcase -->
   <section class="creative-showcase">
-    <div class="showcase-track" id="showcase-track">
+    <div class="showcase-track">
       <img src="images/showcase-1.jpg" alt="Ad creative" onerror="this.style.background='linear-gradient(135deg,#18C5C9,#0d4f4f)';this.style.display='block';">
       <img src="images/showcase-2.jpg" alt="Ad creative" onerror="this.style.background='linear-gradient(135deg,#e67e22,#e74c3c)';this.style.display='block';">
       <img src="images/showcase-3.jpg" alt="Ad creative" onerror="this.style.background='linear-gradient(135deg,#2ecc71,#27ae60)';this.style.display='block';">
@@ -869,64 +369,230 @@
         <p>We treat it like it's our own little baby. To give you the peace of mind that your <span class="highlight">marketing</span> is taken care of. The beautiful thing is, you can try us <span class="highlight">100% risk-free</span>.</p>
       </div>
       <div class="trust-logos fade-in">
-        <img src="images/brand-6.jpg" alt="Nathalie Nicole">
+        <img src="images/brand-1.jpg" alt="Chaco Canyon Trading">
+        <img src="images/brand-2.jpg" alt="Hark Graaf">
+        <img src="images/brand-3.jpg" alt="More Life Garments">
         <img src="images/brand-4.jpg" alt="Pryzmclo">
-        <img src="images/brand-9.jpg" alt="Okami">
         <img src="images/brand-5.jpg" alt="NNBody">
+        <img src="images/brand-6.jpg" alt="Nathalie Nicole">
         <img src="images/brand-7.jpg" alt="The Golden Bean">
+        <img src="images/brand-9.jpg" alt="Okami">
         <img src="images/brand-10.jpg" alt="Bee Fit Foods">
+        <img src="images/brand-12.jpg" alt="No Chaos">
       </div>
     </div>
   </section>
 
-  <!-- Scale Section -->
-  <section class="scale-section">
+  <!-- Call Value Section -->
+  <section class="call-value">
     <div class="container fade-in">
-      <h2>Let's scale harder, together.</h2>
-      <div class="flower-graphic">
-        <div class="petal"></div>
-        <div class="petal"></div>
-        <div class="petal"></div>
-        <div class="petal"></div>
-        <div class="petal"></div>
-        <div class="petal"></div>
-      </div>
-      <div class="stats-row">
-        <div class="stat-box">
-          <div class="label">Consolidated profit</div>
-          <div class="value">$4.2M+</div>
+      <h2>Here's what you get on the call (for free):</h2>
+      <div class="call-value-grid">
+        <div class="call-value-card">
+          <div class="cvc-icon">&#128269;</div>
+          <h4>Ad Account Audit</h4>
+          <p>We'll review your current Meta setup and find the leaks costing you money.</p>
         </div>
-        <div class="stat-box">
-          <div class="label">Like for like</div>
-          <div class="value">3.8x avg ROAS</div>
+        <div class="call-value-card">
+          <div class="cvc-icon">&#128200;</div>
+          <h4>Profit Roadmap</h4>
+          <p>A custom scaling plan showing how the Profit Formula applies to your brand.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section class="about-section" id="about">
-    <div class="container">
-      <div class="about-grid fade-in">
-        <div>
-          <h2>An agency that takes pride in doing a good job!</h2>
-          <p>Many of us have grown weary of agencies that make grand promises and then leave us feeling in the dark.</p>
-          <p>At Brandpeneur, we firmly believe in providing not just exceptional service, but complete transparency as well. Our client case studies include some of the most prominent success stories in the eCommerce and Info-product industries, and we are proud to share them.</p>
-          <p>Whether our clients have seen a modest increase of $50,000 or an astounding &pound;5 million, we believe in being fully forthcoming about their achievements.</p>
-          <p><strong>We have no hidden secrets &mdash; just impressive client growth and brand expansion.</strong></p>
-          <br>
-          <a href="https://calendly.com/elliotpowell-ldm/free-consultation-call" class="btn btn-dark btn-arrow">Book a Call</a>
+        <div class="call-value-card">
+          <div class="cvc-icon">&#127919;</div>
+          <h4>Creative Breakdown</h4>
+          <p>We'll analyze your top-performing creatives and show you what's missing.</p>
         </div>
-        <div>
-          <div class="about-image">
-            <img src="images/case-study-1.png" alt="Meta Ads Manager results showing $193k revenue">
-          </div>
+        <div class="call-value-card">
+          <div class="cvc-icon">&#128176;</div>
+          <h4>Revenue Projection</h4>
+          <p>Realistic 90-day forecast based on your margins, spend, and product data.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Process Section -->
+  <!-- Pain Points -->
+  <section class="pain-section">
+    <div class="container fade-in">
+      <h2>Sound familiar?</h2>
+      <p class="pain-sub">Most 6-figure Shopify brands we talk to are stuck in the same place.</p>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <div class="pain-icon">&#128548;</div>
+          <h4>Burned by agencies before</h4>
+          <p>You've paid thousands for vague reports, vanity metrics, and zero accountability. You're done trusting agencies that can't show you the money.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">&#128201;</div>
+          <h4>ROAS keeps dropping</h4>
+          <p>Creative fatigue is killing your campaigns. What worked last quarter is dying now, and you're stuck refreshing Ads Manager hoping something sticks.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">&#128260;</div>
+          <h4>Scaling spend but not profit</h4>
+          <p>Revenue goes up, but margins stay flat (or shrink). You need a system that compounds profitably, not just burns more budget.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">&#9200;</div>
+          <h4>You're doing everything yourself</h4>
+          <p>Running ads, briefing creatives, checking analytics... you started a brand, not an agency. You need a performance partner, not another task on your plate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Profit Formula -->
+  <section class="formula-section">
+    <div class="container fade-in">
+      <h2>The Profit Formula</h2>
+      <p class="formula-sub">Three systems working together to compound your growth every single month.</p>
+      <div class="formula-grid">
+        <div class="formula-card">
+          <div class="fc-num">01</div>
+          <h3>Creative Engine</h3>
+          <p>We analyze your top performers, research your competitors, and generate high-converting ad creatives in-house, then A/B test relentlessly to find winners.</p>
+        </div>
+        <div class="formula-card">
+          <div class="fc-num">02</div>
+          <h3>Scaling Framework</h3>
+          <p>Our media buying system scales your spend while protecting margins. We monitor ROAS and MER daily, adjusting budgets based on actual profit, not vanity metrics.</p>
+        </div>
+        <div class="formula-card">
+          <div class="fc-num">03</div>
+          <h3>Profit Optimization</h3>
+          <p>CRO audits, landing page optimization, and Klaviyo email flows that increase your AOV and LTV so every ad dollar works harder without spending more.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies -->
+  <section class="case-studies-section" id="case-studies">
+    <div class="container fade-in">
+      <h2>Real numbers. Real Shopify brands.</h2>
+      <p class="cs-sub">We don't hide behind vague testimonials. Here's what our system actually produces.</p>
+
+      <div class="case-study-card">
+        <div class="cs-header">
+          <div class="cs-label">&#127482;&#127480; DTC Beauty Brand</div>
+          <div class="cs-tag">Shopify &middot; Beauty & Skincare</div>
+        </div>
+        <div class="cs-headline">From $12k/m to <span>$193k/m</span> in 5 months</div>
+        <div class="cs-stats">
+          <div class="cs-stat"><div class="csv">$193k</div><div class="csl">Monthly Revenue</div></div>
+          <div class="cs-stat"><div class="csv">4.1x</div><div class="csl">ROAS</div></div>
+          <div class="cs-stat"><div class="csv">1,467%</div><div class="csl">Revenue Growth</div></div>
+          <div class="cs-stat"><div class="csv">5 mo</div><div class="csl">Timeframe</div></div>
+        </div>
+        <div class="cs-image">
+          <img src="images/case-study-1.png" alt="Meta Ads Manager results showing $193k in purchases">
+        </div>
+        <a href="https://calendly.com/elliotpowell-ldm/free-consultation-call" class="btn btn-arrow">Book Your Free Profit Audit</a>
+      </div>
+
+      <div class="case-study-card">
+        <div class="cs-header">
+          <div class="cs-label">&#127482;&#127480; DTC Jewelry Brand</div>
+          <div class="cs-tag">Shopify &middot; Fashion Accessories</div>
+        </div>
+        <div class="cs-headline">Scaled to <span>$122k/m</span> with 3.16x ROAS</div>
+        <div class="cs-stats">
+          <div class="cs-stat"><div class="csv">$122k</div><div class="csl">Monthly Revenue</div></div>
+          <div class="cs-stat"><div class="csv">3.16x</div><div class="csl">ROAS</div></div>
+          <div class="cs-stat"><div class="csv">$122k</div><div class="csl">Total (30 days)</div></div>
+        </div>
+        <div class="cs-image">
+          <img src="images/case-study-2.png" alt="Meta Ads Manager results showing $122k revenue">
+        </div>
+        <a href="https://calendly.com/elliotpowell-ldm/free-consultation-call" class="btn btn-arrow">Book Your Free Profit Audit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section">
+    <div class="container fade-in">
+      <h2>Hear from our Clients</h2>
+      <div class="testimonial-cards">
+        <div class="testimonial-card">
+          <div class="tc-header"><div class="tc-avatar">BS</div><div class="tc-info"><div class="tc-name">Bastiaan Slot</div><div class="tc-role">CEO/Founder, Appointmentsetter.com</div></div></div>
+          <div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="tc-quote">"With Joshua's help we were immediately able to generate an additional $50k/month by running ads on Facebook and Instagram."</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="tc-header"><div class="tc-avatar">RW</div><div class="tc-info"><div class="tc-name">Ryan Wegner</div><div class="tc-role">Founder/CEO, Predictable Clients</div></div></div>
+          <div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="tc-quote">"We've gone from $0 to back to back $100,000 months with our Facebook ads."</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="tc-header"><div class="tc-avatar">DD</div><div class="tc-info"><div class="tc-name">Diania Di Maria</div><div class="tc-role">Owner, Towelback &copy;</div></div></div>
+          <div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="tc-quote">"With Brandpeneur we've had record months that we'd never seen before!"</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="tc-header"><div class="tc-avatar">CM</div><div class="tc-info"><div class="tc-name">Cheryl Mann</div><div class="tc-role">Owner, Bubbas Meltys</div></div></div>
+          <div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="tc-quote">"Only just started working with the guys at Brandpeneur and I'm already seeing amazing results. Their communication is insane!"</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Testimonials -->
+  <section class="video-testimonials">
+    <div class="container fade-in">
+      <h2>Hear it directly from our clients</h2>
+      <p class="vt-sub">Real founders sharing their experience working with Brandpeneur.</p>
+      <div class="vt-grid">
+        <div class="vt-card">
+          <div class="vt-placeholder">&#9654;</div>
+          <div class="vt-info"><h4>Patricia Fontaneda</h4><p>Co-Founder, Ibiza Passion</p></div>
+        </div>
+        <div class="vt-card">
+          <div class="vt-placeholder">&#9654;</div>
+          <div class="vt-info"><h4>Diania Di Maria</h4><p>Owner, Towelback &copy;</p></div>
+        </div>
+        <div class="vt-card">
+          <div class="vt-placeholder">&#9654;</div>
+          <div class="vt-info"><h4>Cheryl Mann</h4><p>Owner, Bubbas Meltys</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison -->
+  <section class="comparison-section">
+    <div class="container fade-in">
+      <h2>Why brands switch to us</h2>
+      <div class="comparison-grid">
+        <div class="comp-col us">
+          <h3>&#10022; Brandpeneur</h3>
+          <ul>
+            <li>We identify the 3-4 buyer segments driving 80% of your revenue and build campaigns around them</li>
+            <li>In-house creative team producing and testing new ad variations every week</li>
+            <li>Performance reporting tied to actual revenue and profit, not impressions and CPMs</li>
+            <li>Weekly video updates showing exactly what's working and what we're doing next</li>
+            <li>CRO + email included. We optimize the full funnel, not just the ads</li>
+            <li>Performance guarantee: profitable ROAS or we work for free</li>
+          </ul>
+        </div>
+        <div class="comp-col them">
+          <h3>&#10006; Typical Agency</h3>
+          <ul>
+            <li>Cookie-cutter audience targeting with no research into your actual customers</li>
+            <li>No creative direction. They expect YOU to provide all the assets</li>
+            <li>Vague dashboards full of vanity metrics that don't tell you if you're making money</li>
+            <li>Monthly calls with no clear action items. You leave more confused than before</li>
+            <li>Ads only. They send traffic to a broken funnel and blame your product</li>
+            <li>Long contracts with no performance accountability</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
   <section class="process-section">
     <div class="container fade-in">
       <h2>Our Process</h2>
@@ -934,33 +600,33 @@
         <div class="process-step">
           <div class="step-icon">&#128222;</div>
           <h4>Discovery Call</h4>
-          <p>First, we need to learn if we're even a good fit. If we can actually fix your issues, we'll invite you for a free call with us.</p>
+          <p>First, we learn if we're a good fit. If we can fix your issues, we'll invite you for a free strategy call.</p>
         </div>
         <div class="process-step">
           <div class="step-icon">&#128269;</div>
           <h4>Audit</h4>
-          <p>We'll build a 100% free 30 minute video and dive into the details of your account to help you achieve them.</p>
+          <p>We build a free 30-min video diving into your account details and opportunities.</p>
         </div>
         <div class="process-step">
           <div class="step-icon">&#9881;</div>
           <h4>Funnel</h4>
-          <p>We'll rebuild or extend your e-com funnels and sales systems to optimize and facilitate conversions.</p>
+          <p>We rebuild or extend your e-com funnels and sales systems to optimize conversions.</p>
         </div>
         <div class="process-step">
           <div class="step-icon">&#128640;</div>
           <h4>Onboarding</h4>
-          <p>We'll share our formally tested likelihood of what we'd set out to do and align on goals and KPIs.</p>
+          <p>We align on goals, KPIs, and set clear expectations for the first 90 days.</p>
         </div>
         <div class="process-step">
           <div class="step-icon">&#9889;</div>
           <h4>Live</h4>
-          <p>We'll hop on a monthly, bi-monthly or weekly call and if you're in a good spot we'll keep scaling together.</p>
+          <p>Weekly or bi-weekly calls as we scale together. Transparent, accountable, relentless.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services Section -->
+  <!-- Services -->
   <section class="services-section">
     <div class="container fade-in">
       <h2>How we can work together</h2>
@@ -979,7 +645,7 @@
         <div class="service-card">
           <div class="badge">Most Popular</div>
           <h3>Full Growth Partnership</h3>
-          <div class="desc">We offer a full growth partnership that accelerates revenue at scale, combines creative strategy, conversion rate optimisation, and expert media buying.</div>
+          <div class="desc">Full growth partnership: creative strategy, conversion rate optimisation, and expert media buying combined.</div>
           <div class="includes-label">What's included</div>
           <ul>
             <li>Ongoing conversion rate optimisation</li>
@@ -1004,126 +670,31 @@
     </div>
   </section>
 
-  <!-- Testimonials Section -->
-  <section class="testimonials-section" id="case-studies">
+  <!-- FAQ -->
+  <section class="faq-section">
     <div class="container fade-in">
-      <h2>Hear from our Clients</h2>
-      <div class="testimonial-cards">
-        <div class="testimonial-card">
-          <div class="tc-name">Bastiaan Slot</div>
-          <div class="tc-role">CEO/Founder of Appointmentsetter.com</div>
-          <div class="tc-quote">"With Joshua's help we were immediately able to generate an additional $50k/month by running ads on Facebook and Instagram."</div>
-          <div class="testimonial-stats">
-            <div class="ts-item">
-              <div class="ts-value">12%</div>
-              <div class="ts-label">Conv. Rate</div>
-            </div>
-            <div class="ts-item">
-              <div class="ts-value">984</div>
-              <div class="ts-label">Purchases</div>
-            </div>
-            <div class="ts-item">
-              <div class="ts-value">35</div>
-              <div class="ts-label">Days</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="tc-name">Cheryl Mann</div>
-          <div class="tc-role">Owner of Bubbas Meltys</div>
-          <div class="tc-quote">"Only just started working with the guys at Brandpeneur and I'm already seeing amazing results. Their communication is insane!"</div>
-          <div class="testimonial-stats">
-            <div class="ts-item">
-              <div class="ts-value">95x</div>
-              <div class="ts-label">ROAS</div>
-            </div>
-            <div class="ts-item">
-              <div class="ts-value">875</div>
-              <div class="ts-label">Purchases</div>
-            </div>
-            <div class="ts-item">
-              <div class="ts-value">945</div>
-              <div class="ts-label">Checkouts</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="tc-name">Diania Di Maria</div>
-          <div class="tc-role">Owner of Towelback &copy;</div>
-          <div class="tc-quote">"With Brandpeneur we've had records that we'd not seen before!"</div>
-          <div class="testimonial-stats">
-            <div class="ts-item">
-              <div class="ts-value">7x</div>
-              <div class="ts-label">ROAS</div>
-            </div>
-            <div class="ts-item">
-              <div class="ts-value">547</div>
-              <div class="ts-label">Purchases</div>
-            </div>
-            <div class="ts-item">
-              <div class="ts-value">945</div>
-              <div class="ts-label">Checkouts</div>
-            </div>
-          </div>
-        </div>
+      <h2>Questions we get asked</h2>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-question">Who's mainly running the ads?</button><div class="faq-answer"><p>Your campaigns are managed by our senior media buying team. Not outsourced, not handed to a junior. You'll have a dedicated strategist who knows your brand, your margins, and your goals inside out. They're the same person on your weekly video updates.</p></div></div>
+        <div class="faq-item"><button class="faq-question">How hands-on is the service?</button><div class="faq-answer"><p>Completely done-for-you. We handle creative strategy, ad production, media buying, CRO, and email flows. You get weekly video reports showing what we're doing, what's working, and what's next. You stay informed without lifting a finger.</p></div></div>
+        <div class="faq-item"><button class="faq-question">How does pricing work?</button><div class="faq-answer"><p>We charge a flat monthly management fee. No percentage of ad spend, no hidden costs. The exact fee depends on your brand's needs and scale. We'll walk you through pricing on the call and make sure it makes sense for your margins before we start.</p></div></div>
+        <div class="faq-item"><button class="faq-question">What kind of brands do you work with?</button><div class="faq-answer"><p>We work with Shopify ecommerce brands doing $10K to $100K+ per month. Our sweet spot is DTC brands in beauty, fashion, home, and lifestyle, but the Profit Formula works for any product-based Shopify store with proven product-market fit.</p></div></div>
+        <div class="faq-item"><button class="faq-question">How fast can we expect results?</button><div class="faq-answer"><p>Most brands see improvements within the first 2-3 weeks as we optimize the account, launch new creative, and fix conversion leaks. The real compounding happens in months 2-3 as our creative engine and data loops kick in.</p></div></div>
+        <div class="faq-item"><button class="faq-question">How does the performance guarantee work?</button><div class="faq-answer"><p>For qualifying brands, we guarantee profitable ROAS or we work for free. We'll define success metrics together upfront so there's zero ambiguity. We only make money when you make more money.</p></div></div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ Section -->
-  <section class="faq-section">
+  <!-- Final CTA -->
+  <section class="final-cta">
     <div class="container fade-in">
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-question">Do you primarily focus on Facebook and Instagram ads for your marketing services? Are there any other channels you utilize?</button>
-          <div class="faq-answer"><p>We primarily focus on Meta (Facebook & Instagram) ads as our core channel, but we also manage campaigns on Google, TikTok, and Klaviyo depending on where your audience converts best.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">Do you only do ads?</button>
-          <div class="faq-answer"><p>No. We offer full growth partnerships that include conversion rate optimisation, creative strategy, funnel building, and media buying. Ads are part of a larger system.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">Who writes the copy for the ads?</button>
-          <div class="faq-answer"><p>Our in-house creative team handles all ad copy. We research your brand, audience, and competitors to write high-converting copy that resonates.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">Do you handle creatives completely? Or do you take input from the brand?</button>
-          <div class="faq-answer"><p>We handle creatives end-to-end, but we love collaborating. We'll take brand guidelines and direction from you, then our creative team produces the assets.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">Who's mainly running the ads?</button>
-          <div class="faq-answer"><p>Your account is managed by a senior media buyer &mdash; not outsourced or handed to a junior. You'll know exactly who is working on your account.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">Will I have access to all the data and numbers in the ad manager?</button>
-          <div class="faq-answer"><p>Absolutely. Full transparency is core to how we operate. You'll have access to everything and we provide clear performance reports showing money spent and money made.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">How hands on is the service? Do you go in and tweak the ads on a daily basis?</button>
-          <div class="faq-answer"><p>Yes, we actively manage and optimise your campaigns daily. We don't set and forget &mdash; we're constantly testing, tweaking, and scaling what works.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">How often do you meet with clients?</button>
-          <div class="faq-answer"><p>We provide weekly video updates and can meet bi-weekly or monthly depending on your preference. Communication is one of our strongest points.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">Is there a way that we can be involved and learn what's going on?</button>
-          <div class="faq-answer"><p>100%. We keep you in the loop with weekly updates, shared dashboards, and strategy calls. We want you to understand and feel confident in what's happening.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">How long have you guys been doing this?</button>
-          <div class="faq-answer"><p>We've been in the paid acquisition space for over 5 years, managing millions in ad spend across hundreds of brands.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">How does the pricing model work? How do clients usually pay?</button>
-          <div class="faq-answer"><p>We work on a monthly retainer model. Pricing depends on your ad spend and the scope of services. Book a call and we'll walk you through the options.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">If I choose to proceed, what should we do next? What is the usual procedure?</button>
-          <div class="faq-answer"><p>Book a Profit Clarity Call, we'll assess your current situation, and if we're a fit we'll send over a proposal and get you onboarded within the week.</p></div>
-        </div>
-      </div>
+      <div class="shield">&#128737;</div>
+      <h2>Ready to see what the Profit Formula can do for your brand?</h2>
+      <p class="cta-desc">Book your free profit audit and get a custom growth roadmap. No strings attached.</p>
+      <p class="guarantee">For qualifying brands, we guarantee profitable ROAS or we work for free.</p>
+      <a href="https://calendly.com/elliotpowell-ldm/free-consultation-call" class="btn btn-lg btn-arrow">Book Your Free Profit Audit</a>
+      <p class="cta-note">You'll speak with Elliot, our Head of Partnerships.</p>
+      <p class="spots-note">Only <strong>2 spots remaining</strong> this month &mdash; intake closes in <span class="countdown2"></span>.</p>
     </div>
   </section>
 
@@ -1148,22 +719,32 @@
           <h4>Follow us</h4>
           <a href="https://twitter.com/itsjoshuadaniel" target="_blank" rel="noopener">X</a>
           <a href="https://www.instagram.com/joshuadanielgeorge/" target="_blank" rel="noopener">Instagram</a>
-          <a href="mailto:Marketing@brandpeneur.com">Contact</a>
+          <a href="mailto:info@brandpeneur.com">Contact</a>
         </div>
       </div>
-      <div class="footer-bottom">
-        &copy; 2026 Brandpeneur B.V. | All rights reserved | KvK: 88576655
-      </div>
+      <div class="footer-bottom">&copy; 2026 Brandpeneur B.V. | All rights reserved | KvK: 88576655</div>
     </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- Exit Intent Popup -->
+  <div class="exit-overlay" id="exitPopup">
+    <div class="exit-popup">
+      <button class="close-popup" onclick="document.getElementById('exitPopup').classList.remove('show')">&times;</button>
+      <div class="ep-tag">Usually $97 &mdash; Yours Free</div>
+      <h3>Grab your free copy of The Profit Formula</h3>
+      <p>The exact playbook we use to scale Shopify brands past $100k/m with Meta Ads. Yours free before you go.</p>
+      <a href="https://calendly.com/elliotpowell-ldm/free-consultation-call" class="btn btn-arrow" onclick="document.getElementById('exitPopup').classList.remove('show')">Send Me The Free Book</a>
+      <p class="ep-note">No spam. Unsubscribe anytime.</p>
+    </div>
+  </div>
+
+  <!-- Social Proof Toast -->
+  <div class="toast" id="toast"></div>
+
   <script>
     // Scroll animations
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
     }, { threshold: 0.1 });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
@@ -1176,6 +757,53 @@
         if (!wasOpen) item.classList.add('open');
       });
     });
+
+    // Countdown timer (resets daily at midnight)
+    function updateCountdown() {
+      const now = new Date();
+      const midnight = new Date(now);
+      midnight.setHours(23, 59, 59, 999);
+      const diff = midnight - now;
+      const h = String(Math.floor(diff / 3600000)).padStart(2, '0');
+      const m = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
+      const s = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
+      const str = h + ':' + m + ':' + s;
+      document.getElementById('countdown').textContent = str;
+      const c2 = document.querySelector('.countdown2');
+      if (c2) c2.textContent = str;
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // Exit intent popup
+    let exitShown = false;
+    document.addEventListener('mouseout', (e) => {
+      if (e.clientY < 5 && !exitShown) {
+        exitShown = true;
+        document.getElementById('exitPopup').classList.add('show');
+      }
+    });
+
+    // Social proof toasts
+    const toasts = [
+      { text: '&#128722; Founder from Austin, TX just booked a Profit Clarity Call', time: '2 min ago' },
+      { text: '&#128230; Shopify store at $35k/mo just booked a Profit Clarity Call', time: '14 min ago' },
+      { text: '&#128640; Beauty brand founder just claimed a spot', time: '38 min ago' },
+      { text: '&#128176; Brand from New York booked a Profit Clarity Call', time: '1 hr ago' },
+      { text: '&#127919; DTC fashion brand just applied for a spot', time: '2 hr ago' },
+      { text: '&#127482;&#127480; Shopify founder from LA booked a Profit Clarity Call', time: '3 hr ago' },
+    ];
+    let toastIndex = 0;
+    function showToast() {
+      const el = document.getElementById('toast');
+      const t = toasts[toastIndex % toasts.length];
+      el.innerHTML = t.text + '<div class="toast-time">' + t.time + '</div>';
+      el.classList.add('show');
+      setTimeout(() => { el.classList.remove('show'); }, 4000);
+      toastIndex++;
+    }
+    setTimeout(showToast, 8000);
+    setInterval(showToast, 25000);
   </script>
 </body>
 </html>
